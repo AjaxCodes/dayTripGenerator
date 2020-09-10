@@ -1,8 +1,8 @@
 'use strict'
 var destination = ['milwaukee', 'chicago', 'dallas', 'tampa', 'orlando', 'miami', 'los Angelas'];
-var resturaunt  = ['cracker Barrel', 'bobEvans', 'hardees', 'fancySteakhouse', 'sushiBar'];
+var resturaunt  = ['cracker Barrel', 'bob Evans', 'hardees', 'fancy Steakhouse', 'sushi Bar'];
 var transportation  = ['plane', 'train', 'automobile'];
-var entertainment  = ['movie', 'barCrawl', 'tour', 'artMuseum', 'museum', 'artGallary', 'worldMostFamousWhatever']
+var entertainment  = ['movie', 'barCrawl', 'tour', 'art Museum', 'museum', 'art Gallary', 'worlds Most Famous Whatever']
 let result;
 
 function findDestination(){
@@ -19,12 +19,12 @@ function findResturaunt (){
 }
 findResturaunt();
 
-//function findTransportation(){
-   // for (i = 0; transportation.length; i++)
-//transportatiopn.Math.random + 1();
-   // console.log();
-//}
-
+function findTransportation(){
+   let result = Math.floor(Math.random() *transportation.length);
+   result = transportation[result];
+   console.log(result);
+}
+findTransportation();
 //function findEntertainment(){
    // for (i = 0; entertainment.length; i++)
     //entertainment.Math.random  + 1();
