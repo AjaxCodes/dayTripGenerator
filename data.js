@@ -20,13 +20,16 @@ function findResturaunt (){
 findResturaunt();
 
 function findTransportation(){
-   let result = Math.floor(Math.random() *transportation.length);
+   let result = Math.floor(Math.random() * transportation.length);
    result = transportation[result];
    console.log(result);
 }
 findTransportation();
-//function findEntertainment(){
-   // for (i = 0; entertainment.length; i++)
-    //entertainment.Math.random  + 1();
-   // console.log();
-//}
+
+function findEntertainment(){
+   let result = Math.floor(Math.random() * entertainment.length);
+   result = entertainment[result];
+   console.log(result);
+}
+findEntertainment();
+
