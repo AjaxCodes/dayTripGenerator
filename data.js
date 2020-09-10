@@ -12,12 +12,12 @@ function findDestination(){
 }
 findDestination();
 
-//function findResturaunt (){
-   // for (i = 0; resturaunt.length; i++)
-   // resturaunt.Math.random + 1();
-
-   // console.log();
-//}
+function findResturaunt (){
+   let result = Math.floor(Math.random() * resturaunt.length);
+   result = resturaunt[result];
+   console.log(result);
+}
+findResturaunt();
 
 //function findTransportation(){
    // for (i = 0; transportation.length; i++)
