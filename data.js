@@ -9,8 +9,8 @@
 var destination = ['Narnia', 'Bikini Bottom', 'Middle Earth', 'The Shire', 'New Asgard', 'Wakanda', 'Geonosis'];
 var resturaunt  = ['Chum Bucket', 'Bobs Burger Shack', 'The Crusty Crab', 'The Hawthorne Grille', 'Shalom Grill'];
 var transportation  = ['Plane', 'Train', 'Automobile'];
-var entertainment  = ['Movie', 'Bar Crawl', 'Tour', 'Art Museum', 'Museum', 'Art Gallary', 'Worlds Most Famous Whatever'];
-var trip =[];
+var entertainment  = ['Movie', 'Bar Crawl', 'Tour', 'Art Museum', 'Jelly Fishing', 'Museum', 'Art Gallary', 'Worlds Most Famous Whatever'];
+var trip = [];
 let result;
 
 function findDestination(){
@@ -20,56 +20,81 @@ function findDestination(){
    return chosenDestination;
 }
 let chosenDestination = findDestination();
+trip[0] = (chosenDestination);
+
+//
 
 function findResturaunt (){
-   let result = Math.floor(Math.random() * resturaunt.length);
-   chosenResturaunt = resturaunt[result];
-   console.log(chosenResturaunt);
-   return chosenResturaunt;
+  let result = Math.floor(Math.random() * resturaunt.length);
+  let chosenResturaunt = resturaunt[result];
+  console.log(chosenResturaunt);
+  return chosenResturaunt;
 }
 let chosenResturaunt = findResturaunt();
+trip[1] = (chosenResturaunt);
+
+// 
 
 function findTransportation(){
    let result = Math.floor(Math.random() * transportation.length);
-   chosenTransportation = transportation[result];
-   console.log(chosenTransportation);
-   return chosenTransportation;
+  let chosenTransportation = transportation[result];
+  console.log(chosenTransportation);
+  return chosenTransportation;
 }
 let chosenTransportation = findTransportation();
+trip[2] = (chosenTransportation);
+
+//
 
 function findEntertainment(){
    let result = Math.floor(Math.random() * entertainment.length);
-   chosenEntertainment = entertainment[result];
+let chosenEntertainment = entertainment[result];
    console.log(chosenEntertainment);
    return chosenEntertainment;
 }
 let chosenEntertainment = findEntertainment();
+trip[3] = (chosenEntertainment);
+
+//
 
 function reSelectOption(){
-   switch () {
+  let  user = prompt('If everything is to your liking select 5,  If you would like to change anything else, select 1 for new destination. select 2 for new resturaunt. Select, 3 for new mode of transportation. Select, 4 for new entertainment options.');
+  switch (user){
       
-      case 1:
+     case 1:
         choice = "Destination";
-        chosenDestination = findDestination();
-        break;
-      case 2:
+        let chosenDestination = findDestination();
+        trip[0](chosenDestination);
+        console.log(trip);
+        reSelectOption();
+      break;
+     case 2:
         choice = "resturaunt";
-        chosenresturaunt = findResturaunt();
-        break;
+        let chosenResturaunt = findResturaunt();
+        trip[1](chosenResturaunt);
+        console.log(trip);
+        reSelectOption();
+       break;
       case 3:
          choice = "transportation";
-         chosentransportation = findTransportation();
-        break;
+         let chosenTransportation = findTransportation();
+         trip[2](chosenTransportation);
+         console.log(trip);
+         reSelectOption();
+       break;
       case 4:
-         choice = "entertainment";
-         chosenentertainment =  findEntertainment();
-        break;
+          choice = "entertainment";
+          let chosenEntertainment =  findEntertainment();
+          trip[3](chosenEntertainment);
+          console.log(trip);
+          reSelectOption();
+       break;
       case 5:
          choice = "This sounds Fun. Im all complete here.";
-         console.log('Complete');
-        break;
-      
-
+         console.log(trip);
+         console.log('complete');
+       break;
+  }
+  
 }
-
-
+reSelectOption();
