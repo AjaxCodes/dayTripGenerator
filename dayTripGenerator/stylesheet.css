@@ -1,0 +1,19 @@
+.cube{
+    position: reletive;
+    width: 200px;
+    height: 200px;
+
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+
+    animation: rotate 10s linear infinate;
+}
+
+@keyframes rotate{
+    from{
+        transform: translateZ(-100px);
+    }
+    to{
+        transform:translateZ(-100px) rotateY(200deg) rotateX(200deg);
+    }
+}

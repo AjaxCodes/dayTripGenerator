@@ -4,7 +4,52 @@
 <head>
         <title> Worksheet </title>
     </head>
+
+
+    <style>
+        .cube{
+    position: reletive;
+    width: 200px;
+    height: 200px;
+
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+
+    animation: rotate 10s linear infinate;
+}
+
+@keyframes rotate{
+    from{
+        transform: translateZ(-100px);
+    }
+    to{
+        transform:translateZ(-100px) rotateY(200deg) rotateX(200deg);
+    }
+}
+    </style>
    
-    <body>
+    
+   <div class="cube">
+       <div class="face front">
+       destination
+    </div>
+       <div class="face back">
+       resturaunt
+    </div>
+    <div class="face right">
+        transportation
+    </div>
+    <div class="face left">
+       entertainment
+    </div>
+    <div class="face top">
+        friends
+    </div>
+    <div class="face bottom">
+        Trip Generator
+    </div>
+</div>
+    
+<body>
         <script src="data.js"></script>
     </body>
