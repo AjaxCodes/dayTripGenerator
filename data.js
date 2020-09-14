@@ -67,27 +67,27 @@ function reSelectOption(){
      case '1':
          trip[0]=findDestination();
         console.log(trip);
-        reSelectOption();
+        confirmResults();
        break;
      case '2':
          trip[1]=findResturaunt();
         console.log(trip);
-        reSelectOption();
+        confirmResults();
       break;
       case '3':
          trip[2]=findTransportation();
          console.log(trip);
-         reSelectOption();
+         confirmResults();
           break;
       case '4':
          trip[3]=findEntertainment();
           console.log(trip);
-          reSelectOption();
+          confirmResults();
        break;
        case '5':
           trip[4]=findFriend;
          console.log(trip);
-         reSelectOption();
+         confirmResults();
          break;
       case '6':
          console.log(trip,'complete');
