@@ -90,6 +90,8 @@ function reSelectOption(){
          confirmResults();
          break;
       case '6':
+         document.getElementsByClassName("face first").value = trip[0];
+         // for all of them
          console.log(trip,'complete');
          break;
       default:
